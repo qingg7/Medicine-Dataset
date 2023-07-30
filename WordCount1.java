@@ -25,7 +25,7 @@ public class WordCount1 {
             // Check if the line has enough attributes and the "Condition" attribute is available
             if (attributes.length >= 4) { 
                 // Get the value of the "Condition" attribute
-                String review = attributes[3].trim();
+                String condition = attributes[3].trim();
 
                 // Split the review into words using whitespace as delimiter
                 String[] words = condition.split("\\s+");
