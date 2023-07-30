@@ -25,7 +25,7 @@ public class WordCount {
             // Check if the line has enough attributes and the "DrugName" attribute is available
             if (attributes.length >= 4) { 
                 // Get the value of the "DrugName" attribute
-                String review = attributes[3].trim();
+                String drugName = attributes[3].trim();
 
                 // Split the review into words using whitespace as delimiter
                 String[] words = drugName.split("\\s+");
