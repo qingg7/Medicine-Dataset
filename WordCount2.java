@@ -23,7 +23,7 @@ public class WordCount2 {
             String[] attributes = line.split(",");
 
             // Check if the line has enough attributes and the "Review" attribute is available
-            if (attributes.length >= 4) { // Assuming the "Review" attribute is at index 3 (0-based index)
+            if (attributes.length >= 4) { 
                 // Get the value of the "Review" attribute
                 String review = attributes[4].trim();
 
