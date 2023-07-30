@@ -22,13 +22,13 @@ public class WordCount {
             // Split the line by commas (assuming it's a CSV file) to get the attributes
             String[] attributes = line.split(",");
 
-            // Check if the line has enough attributes and the "Review" attribute is available
-            if (attributes.length >= 4) { // Assuming the "Review" attribute is at index 3 (0-based index)
-                // Get the value of the "Review" attribute
+            // Check if the line has enough attributes and the "DrugName" attribute is available
+            if (attributes.length >= 4) { 
+                // Get the value of the "DrugName" attribute
                 String review = attributes[3].trim();
 
                 // Split the review into words using whitespace as delimiter
-                String[] words = review.split("\\s+");
+                String[] words = drugName.split("\\s+");
 
                 // Emit each word with a count of 1
                 for (String w : words) {
