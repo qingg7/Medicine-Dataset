@@ -15,8 +15,9 @@ def word_count(data_frame):
                 word_count_dict[word] += 1
     return word_count_dict
 
-# Load the CSV data from the raw link on GitHub
-file_path = 'https://raw.githubusercontent.com/qingg7/Medicine-Dataset/main/Sem%209.csv'
+# Load the CSV file from the raw link into a DataFrame
+file_url = 'https://raw.githubusercontent.com/qingg7/Medicine-Dataset/main/Sem%209.csv'
+data_frame = pd.read_csv(file_url)
 
 # Start the timer
 start_time = time.time()
@@ -34,3 +35,4 @@ for word, count in word_count_result.items():
 # Calculate processing time in seconds
 processing_time = end_time - start_time
 print("Processing time: {:.2f} seconds".format(processing_time))
+
