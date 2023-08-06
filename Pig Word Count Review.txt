@@ -1,0 +1,8 @@
+Pig Word Count
+
+#Review Attribute
+grunt> input_data = LOAD 'Sem_9.csv' USING PigStorage(',') AS (ID, DrugName, Condition, Review, Rating, Date, UsefulCount);
+grunt> words = FOREACH input_data GENERATE FLATTEN(TOKENIZE(Review)) AS word;
+grunt> word_counts = GROUP words BY word;
+grunt> word_counts = FOREACH word_counts GENERATE group AS word, COUNT(words) AS count;
+grunt> STORE word_counts INTO 'output2' USING PigStorage('\t');
