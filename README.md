@@ -6,6 +6,8 @@ Student ID: 19028570
 
 Dataset - Medicine Dataset (Sem 9.csv)
 
+wget https://raw.githubusercontent.com/qingg7/Medicine-Dataset/main/Sem%209.csv
+
 1) Hadoop MapReduce Word Count using Java
 
    - MapReduce word count on 'DrugName' attribute: (WordCount.java)
