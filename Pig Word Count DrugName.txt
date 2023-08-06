@@ -6,6 +6,3 @@ grunt> words = FOREACH input_data GENERATE FLATTEN(TOKENIZE(DrugName)) AS word;
 grunt> word_counts = GROUP words BY word;
 grunt> word_counts = FOREACH word_counts GENERATE group AS word, COUNT(words) AS count;
 grunt> STORE word_counts INTO 'output' USING PigStorage('\t');
-
-
-
